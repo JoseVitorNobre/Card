@@ -1,0 +1,5 @@
+{
+  "compilerOptions": {},
+  "include": ["@types/*.d.ts", "styles/*.ts"],
+  "exclude": ["node_modules"]
+}

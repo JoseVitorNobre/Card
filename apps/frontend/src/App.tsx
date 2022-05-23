@@ -1,11 +1,13 @@
-import { Button } from 'ui'
+import { ThemeProvider } from 'styled-components'
+import { Button, GlobalStyles, theme } from 'ui'
 
 export const App: React.FC = () => {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Button text='Testando' />
       <Button text='Testando 2' />
       <Button />
-    </div>
+    </ThemeProvider>
   )
 }
