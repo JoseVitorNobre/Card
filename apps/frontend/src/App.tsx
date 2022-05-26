@@ -1,13 +1,12 @@
 import { ThemeProvider } from 'styled-components'
-import { Button, GlobalStyles, theme } from 'ui'
+import { GlobalStyles, theme } from 'ui'
+import { PageRoutes } from './routes'
 
 export const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme[0]}>
       <GlobalStyles />
-      <Button text='Testando' />
-      <Button text='Testando 2' />
-      <Button />
+      <PageRoutes />
     </ThemeProvider>
   )
 }
