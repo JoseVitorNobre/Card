@@ -4,7 +4,7 @@ import { PageRoutes } from './routes'
 
 export const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme[0]}>
+    <ThemeProvider theme={theme[1]}>
       <GlobalStyles />
       <PageRoutes />
     </ThemeProvider>

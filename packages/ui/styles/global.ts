@@ -15,5 +15,6 @@ export const GlobalStyles = createGlobalStyle`
     overflow: hidden auto;
     background-color: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
+    font-family: 'Montserrat', sans-serif;
   }
 `

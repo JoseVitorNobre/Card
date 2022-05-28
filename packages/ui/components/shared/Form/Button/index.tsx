@@ -1,15 +1,26 @@
-import { useState } from 'react'
+import { ButtonHTMLAttributes } from 'react'
+import styled from 'styled-components'
 
-interface Props {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string
 }
 
-export const Button: React.FC<Props> = ({ text = 'send' }) => {
-  const [count, setCount] = useState(0)
-
+export const Button: React.FC<Props> = ({ text = 'send', ...props }) => {
   return (
-    <button onClick={() => setCount(o => ++o)}>
-      {text} - {count}
-    </button>
+    <Container>
+      <StyledButton {...props}>{text}</StyledButton>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  padding: 4px;
+`
+
+const StyledButton = styled.button`
+  border-radius: 4px;
+  padding: 10px;
+  border: none;
+  color: #f1f1f1;
+  background-color: ${props => props.theme.colors.primary};
+`
