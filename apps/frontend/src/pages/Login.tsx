@@ -41,6 +41,7 @@ export const Login = () => {
             placeholder='Senha'
           />
           <Button text='Enviar' />
+          <Button text='Cadastrar-se' />
         </form>
       </FormContainer>
     </Container>
